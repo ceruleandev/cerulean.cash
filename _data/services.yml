@@ -10,24 +10,24 @@ services:
   - body: Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do
       eiusmod       tempor incididunt
     icon: fa fa-plus
-    title: Room Setup
+    title: Staking
   - body: Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do
       eiusmod       tempor incididunt
     icon: fa fa-music
-    title: Audio/Visuals
+    title: Governance
   - body: Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do
       eiusmod       tempor incididunt
     icon: fa fa-print
-    title: Printing
+    title: Security
   - body: Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do
       eiusmod       tempor incididunt
     icon: fa fa-wifi
-    title: WiFi
+    title: Custom Identity
   - body: Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do
       eiusmod       tempor incididunt
     icon: fa fa-map-signs
-    title: Floor Planning
+    title: Trading
   - body: Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do
       eiusmod       tempor incididunt
     icon: fa fa-car
-    title: Parking
+    title: Fast Transactions
