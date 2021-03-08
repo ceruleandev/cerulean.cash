@@ -147,7 +147,7 @@ code, pre {
 }
 
 #feature {
-  background: url("https://picsum.photos/1601/601?random");
+  background: url("https://picsum.photos/1601/601?random&blur=5");
   background-position: 50% 94px;
   width: 100%;
   display: block;
@@ -335,7 +335,7 @@ font header .navbar-default .navbar-nav li a:hover {
 }
 
 #global-header {
-  background: url("https://picsum.photos/1600/370?random") no-repeat;
+  background: url("https://picsum.photos/1600/370?random&blur=5") no-repeat;
   background-size: cover;
   padding-top: 150px;
   padding-bottom: 107px;
@@ -356,7 +356,7 @@ font header .navbar-default .navbar-nav li a:hover {
   opacity: 0.8;
 }
 #global-header .block {
-  color: #E3E3E4;
+  color: #e3e3e4;
   margin: 0 auto;
   padding-left: 90px;
   text-align: center;
