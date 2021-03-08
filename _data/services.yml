@@ -1,41 +1,33 @@
 services:
-  - body: >-
-      Cerulean can easily adapt over time without hard forks to integrate
-      new features or fix bugs.
+  - body: Cerulean can easily adapt over time without hard forks using runtime
+      upgrades.
     icon: fas fa-utensils
     title: Forkless
-  - body: >-
-      Native support for N.F.T. (or Non Fungible Token) assets means ease
-      of use for users, and less overhead.
+  - body: Native support for N.F.T. (or Non Fungible Token) means ease of use, and
+      less overhead.
     icon: fas fa-frog
     title: NFT Assets
-  - body: >-
-      Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do
+  - body: Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do
       eiusmod       tempor incididunt
     icon: fa fa-plus
     title: Room Setup
-  - body: >-
-      Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do
+  - body: Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do
       eiusmod       tempor incididunt
     icon: fa fa-music
     title: Audio/Visuals
-  - body: >-
-      Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do
+  - body: Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do
       eiusmod       tempor incididunt
     icon: fa fa-print
     title: Printing
-  - body: >-
-      Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do
+  - body: Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do
       eiusmod       tempor incididunt
     icon: fa fa-wifi
     title: WiFi
-  - body: >-
-      Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do
+  - body: Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do
       eiusmod       tempor incididunt
     icon: fa fa-map-signs
     title: Floor Planning
-  - body: >-
-      Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do
+  - body: Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do
       eiusmod       tempor incididunt
     icon: fa fa-car
     title: Parking
