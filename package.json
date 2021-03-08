@@ -1,7 +1,7 @@
 {
-  "name": "jekyll-cms",
+  "name": "cerulean-cash",
   "version": "0.1.0",
-  "description": "A Jekyll demo site using Netlify CMS",
+  "description": "Cerulean.Cash Info Site",
   "main": "gulpfile.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1"
@@ -11,22 +11,22 @@
   "devDependencies": {
     "babel-core": "^6.26.3",
     "babel-preset-env": "^1.7.0",
-    "browser-sync": "^2.18.13",
+    "browser-sync": "^2.26.14",
     "css-mqpacker": "^6.0.1",
-    "gulp": "^3.8.8",
-    "gulp-autoprefixer": "1.0.0",
+    "gulp": "^4.0.0",
+    "gulp-autoprefixer": "^7.0.1",
     "gulp-babel": "^7.0.1",
     "gulp-clean-css": "^3.8.0",
     "gulp-concat": "^2.6.1",
-    "gulp-imagemin": "^3.3.0",
+    "gulp-dart-sass": "^1.0.2",
+    "gulp-imagemin": "^7.1.0",
     "gulp-postcss": "^7.0.0",
     "gulp-rename": "^1.2.2",
-    "gulp-sass": "^4.0.0",
-    "gulp-uglify": "^3.0.0"
+    "gulp-uglify": "^3.0.2"
   },
   "repository": {
     "type": "git",
-    "url": "https://github.com/NickStees/jekyll-cms.git"
+    "url": "https://github.com/ceruleandev/cerulean.cash.git"
   },
   "keywords": [
     "jekyll",
@@ -36,5 +36,5 @@
     "Netlify",
     "NetlifyCMS"
   ],
-  "homepage": "https://github.com/NickStees/jekyll-cms"
+  "homepage": "cerulean.cash"
 }

@@ -6,7 +6,7 @@
 
 var gulp = require("gulp");
 var browserSync = require("browser-sync").create();
-var sass = require("gulp-sass");
+var sass = require("gulp-dart-sass");
 var prefix = require("gulp-autoprefixer");
 var cp = require("child_process");
 var imagemin = require("gulp-imagemin");
@@ -19,6 +19,7 @@ var mqpacker = require("css-mqpacker");
 var babel = require("gulp-babel");
 
 var jekyll = process.platform === "win32" ? "jekyll.bat" : "jekyll";
+var bundle = process.platform === "win32" ? "bundle.bat" : "bundle";
 var messages = {
   jekyllBuild: '<span style="color: grey">Running:</span> $ jekyll build',
 };
@@ -32,22 +33,19 @@ gulp.task("jekyll-build", function(done) {
 });
 
 /**
- * Rebuild Jekyll & do page reload
+ * Build the Jekyll Site using bundler
  */
-gulp.task("jekyll-rebuild", ["jekyll-build"], function() {
-  browserSync.reload();
+gulp.task("bundle-exec-jekyll-build", function(done) {
+  browserSync.notify(messages.jekyllBuild);
+  return cp.spawn(bundle, ["exec", "jekyll", "build"], { stdio: "inherit" }).on("close", done);
 });
 
 /**
- * Wait for jekyll-build, then launch the Server
+ * Rebuild Jekyll & do page reload
  */
-gulp.task("browser-sync", ["jekyll-build", "sass", "bundle-js"], function() {
-  browserSync.init({
-    server: {
-      baseDir: "_site",
-    },
-  });
-});
+gulp.task("jekyll-rebuild", gulp.series("bundle-exec-jekyll-build", function() {
+  browserSync.reload();
+}));
 
 /**
  * Compile files from _scss into both _site/css (for live injecting) and site (for future jekyll builds). Also create minified versions for production use.
@@ -80,6 +78,36 @@ gulp.task("sass", function() {
 });
 
 /**
+ * Bundle js files together and then created minified versions and publish them to the correct locations.
+ */
+gulp.task("bundle-js", function() {
+  return gulp
+    .src(["assets/js/vendor/modernizr-custom.js", "assets/js/main.js"])
+    .pipe(concat("bundle.js"))
+    .pipe(gulp.dest("assets/js"))
+    .pipe(
+      babel({
+        presets: ["env"],
+      })
+    )
+    .pipe(uglify())
+    .pipe(rename({ extname: ".min.js" }))
+    .pipe(gulp.dest("assets/js"))
+    .pipe(browserSync.stream());
+});
+
+/**
+ * Wait for jekyll-build, then launch the Server
+ */
+gulp.task("browser-sync", gulp.series("bundle-exec-jekyll-build", "sass", "bundle-js", function() {
+  browserSync.init({
+    server: {
+      baseDir: "_site",
+    },
+  });
+}));
+
+/**
  * Watch scss files for changes & recompile
  * Watch html/md files, run jekyll & reload BrowserSync
  */
@@ -100,25 +128,6 @@ gulp.task("watch", function() {
     ],
     ["jekyll-rebuild"]
   );
-});
-
-/**
- * Bundle js files together and then created minified versions and publish them to the correct locations.
- */
-gulp.task("bundle-js", function() {
-  return gulp
-    .src(["assets/js/vendor/modernizr-custom.js", "assets/js/main.js"])
-    .pipe(concat("bundle.js"))
-    .pipe(gulp.dest("assets/js"))
-    .pipe(
-      babel({
-        presets: ["env"],
-      })
-    )
-    .pipe(uglify())
-    .pipe(rename({ extname: ".min.js" }))
-    .pipe(gulp.dest("assets/js"))
-    .pipe(browserSync.stream());
 });
 
 // run "gulp images" to process images from assets/_src_img to /img folder to be used on the site
@@ -146,4 +155,4 @@ gulp.task("images", function() {
  * Default task, running just `gulp` will compile the sass,
  * compile the jekyll site, launch BrowserSync & watch files.
  */
-gulp.task("default", ["browser-sync", "watch"]);
+gulp.task("default", gulp.series("browser-sync", "watch"));
