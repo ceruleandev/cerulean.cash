@@ -1,20 +1,24 @@
 title: Cerulean Cash
 subtitle: The cash that sentient frogs use
-intro-title: Editable Static Sites
-intro-subtitle: Update via a web UI
-intro-body: >-
-  Static sites are fast to get up and running and develop on. They are also **performance
-  beasts** but their biggest downside is non technical users editing content. Adding the
-  Netlify CMS to your Jekyll site means clients can update this site via a Web UI. It is
-  no wordpress or Drupal replacement, but gets the job done.
-intro-img: /uploads/8649856355_627bcdeadf_h.jpg
-feature-title: This is Editable!
-feature-subtitle: Even a complex layout like this is editable with the Netlify CMS, you won't be having client adjust the layout like [Gutenberg](https://wordpress.org/plugins/gutenberg/), but they can still keep things up to date!
-testimonial-title: We are the Best
-testimonial-subtitle: Even these complex icon graphics below can be updated
+intro-title: Our Vision
+intro-subtitle: Crypto Currency for the froggies
+intro-body: The Cerulean network is not only designed with first-class support
+  for Non Fungible Assets such as cute frog characters, but also is designed
+  with energy efficiency in mind in order to be nicer to the environment. There
+  are also plans in the works to enable burned funds to go to a pot for donation
+  to various charities related to the environment, but this still needs more
+  concept work done to figure out how feasible it is.
+intro-img: https://images.unsplash.com/photo-1559253664-ca249d4608c6?ixid=MXwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHw%3D&ixlib=rb-1.2.1&auto=format&fit=crop&w=1650&q=80
+feature-title: Easy to use interface
+feature-subtitle: The Cerulean Network has a very easy to use interface,
+  requiring only a web browser to get started. Manage your froggies and your
+  monies in one convenient place. Desktop apps will be coming soon as well.
+testimonial-title: Network Stats
+testimonial-subtitle: Take a peek at the current state of our network
 hotels: "15"
 resturants: "25"
 museums: "100"
 minutes: "12"
 services-title: Key Features
-services-subtitle: Cerulean is built on top of the Substrate, a blockchain framework developed by the Web3 Foundation / Parity Technologies.
+services-subtitle: Cerulean is built on top of Substrate, enabling fast and
+  secure development of features using rust-lang.
