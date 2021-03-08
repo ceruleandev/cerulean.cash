@@ -1,11 +1,12 @@
 {
-  "top": [{
+  "top": [
+    {
       "text": "Home",
       "path": "/"
     },
     {
-      "text": "Directory",
-      "path": "/directory/"
+      "text": "Wiki",
+      "path": "#"
     },
     {
       "text": "Gallery",
@@ -20,15 +21,16 @@
       "path": "/contact/"
     },
     {
-      "text": "Data",
+      "text": "Stats",
       "path": "/data/"
     },
     {
-      "text": "Documents",
+      "text": "Whitepaper",
       "path": "/docs/"
     }
   ],
-  "left": [{
+  "left": [
+    {
       "text": "Home",
       "path": "/"
     },

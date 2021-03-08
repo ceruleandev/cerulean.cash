@@ -2,8 +2,8 @@
 layout: page
 title: Directory
 permalink: /directory/
-headerTitle: Employee Directory
-headerSubCopy: Find who you are looking for
+headerTitle: Node / Entrypoint Directory
+headerSubCopy: View the currently active nodes of the network
 custom_head_datatables: true
 ---
 
@@ -11,27 +11,30 @@ custom_head_datatables: true
 
 <div class="container">
   <div class="row">
-    <h3>Employee Directory</h3>
-    <p>This employee directory is built from a single .csv file that is easy for clients to maintain with minimal Excel skills, and simple for a developer to update.</p>
+    <h3>Node / Entrypoint Directory</h3>
+    <p>This is a list of the currently active nodes on the Cerulean Network. Feel free to use these as entry-points if the defaults are not working.</p>
     <hr>
     <table class="table table-striped dataTable">
       <thead>
         <tr>
-          <td>First Name</td>
-          <td>Last Name</td>
-          <td>Email</td>
-          <td>Gender</td>
-          <td>Department</td>
+          node_name,node_region,node_version,node_uptime
+          <td>Node Name</td>
+          <td>Node Region</td>
+          <td>Node Version</td>
+          <td>Node Uptime</td>
+          <td>Node IP</td>
+          <td>Ping</td>
         </tr>
       </thead>
       <tbody>
         {% for user in site.data.directory %}
         <tr>
-          <td>{{user.first_name}}</td>
-          <td>{{user.last_name}}</td>
-          <td><a href="MailTo:{{ user.email }}">{{ user.email }}</a></td>
-          <td>{{user.gender}}</td>
-          <td>{{user.department | strip_html | truncatewords: 50 }}</td>
+          <td>{{user.node_name | strip_html | truncatewords: 50 }}</td>
+          <td>{{user.node_region}}</td>
+          <td>{{user.node_version}}</td>
+          <td>{{user.node_uptime}}</td>
+          <td>{{user.node_ip | strip_html | truncatewords: 50 }}</td>
+          <td>22ms</td>
         </tr>
         {% endfor %}
       </tbody>

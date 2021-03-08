@@ -1,41 +1,41 @@
 services:
   - body: >-
-      Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do
-      eiusmod       tempor incididunt
-    icon: fa-cutlery
-    title: Catering
+      Cerulean can easily adapt over time without hard forks to integrate
+      new features or fix bugs.
+    icon: fas fa-utensils
+    title: Forkless
+  - body: >-
+      Native support for N.F.T. (or Non Fungible Token) assets means ease
+      of use for users, and less overhead.
+    icon: fas fa-frog
+    title: NFT Assets
   - body: >-
       Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do
       eiusmod       tempor incididunt
-    icon: fa-bullhorn
-    title: Conference Services
-  - body: >-
-      Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do
-      eiusmod       tempor incididunt
-    icon: fa-plus
+    icon: fa fa-plus
     title: Room Setup
   - body: >-
       Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do
       eiusmod       tempor incididunt
-    icon: fa-music
+    icon: fa fa-music
     title: Audio/Visuals
   - body: >-
       Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do
       eiusmod       tempor incididunt
-    icon: fa-print
+    icon: fa fa-print
     title: Printing
   - body: >-
       Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do
       eiusmod       tempor incididunt
-    icon: fa-wifi
+    icon: fa fa-wifi
     title: WiFi
   - body: >-
       Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do
       eiusmod       tempor incididunt
-    icon: fa-map-signs
+    icon: fa fa-map-signs
     title: Floor Planning
   - body: >-
       Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do
       eiusmod       tempor incididunt
-    icon: fa-car
+    icon: fa fa-car
     title: Parking
